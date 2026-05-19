@@ -10,7 +10,8 @@
 </script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -30,7 +31,7 @@
   --text:#1e293b;
   --muted:#64748b;
   --dim:#94a3b8;
-  --serif:'DM Serif Display',Georgia,serif;
+  --serif:'Fraunces',Georgia,serif;
   --sans:'Plus Jakarta Sans',sans-serif;
   --mono:'JetBrains Mono',monospace;
 }
@@ -194,7 +195,8 @@ h2.sh{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:40
 .sk-card:nth-child(even)::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
 .sk-card:nth-child(odd):hover{border-color:rgba(79,70,229,.25);box-shadow:0 6px 16px rgba(79,70,229,.08)}
 .sk-card:nth-child(even):hover{border-color:rgba(79,70,229,.08);box-shadow:0 6px 16px rgba(79,70,229,.08)}
-.sk-icon{font-size:1.5rem;margin-bottom:.75rem}
+.sk-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;margin-bottom:.85rem;background:var(--purple-g);border-radius:9px;border:1px solid rgba(79,70,229,.12)}
+.sk-icon i[data-lucide]{width:18px;height:18px;stroke:var(--purple);stroke-width:1.75}
 .sk-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:1rem}
 .sk-card:nth-child(odd) .sk-title{color:var(--purple)}
 .sk-card:nth-child(even) .sk-title{color:var(--purple)}
@@ -208,7 +210,8 @@ h2.sh{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:40
 .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .trust-card{background:#fff;border:1px solid var(--gb);border-radius:16px;padding:2rem;text-align:center;transition:transform .2s,border-color .2s,box-shadow .2s;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .trust-card:hover{transform:translateY(-3px);border-color:rgba(79,70,229,.2);box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.trust-icon{font-size:2rem;margin-bottom:.75rem}
+.trust-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;background:var(--purple-g);border-radius:10px;border:1px solid rgba(79,70,229,.12)}
+.trust-icon i[data-lucide]{width:20px;height:20px;stroke:var(--purple);stroke-width:1.75}
 .trust-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
 .trust-desc{font-size:.82rem;color:var(--muted);line-height:1.7}
 
@@ -216,7 +219,8 @@ h2.sh{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:40
 .awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .awc{background:#fff;border:1px solid var(--gb);border-radius:12px;padding:1.1rem 1.25rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .2s,transform .2s,box-shadow .2s;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .awc:hover{transform:translateY(-2px);border-color:rgba(217,119,6,.25);box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.awi{width:36px;height:36px;border-radius:9px;background:rgba(217,119,6,.06);border:1px solid rgba(217,119,6,.12);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.awi{width:36px;height:36px;border-radius:9px;background:var(--gold-g);border:1px solid rgba(180,83,9,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.awi i[data-lucide]{width:18px;height:18px;stroke:var(--gold);stroke-width:1.75}
 .awt{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.15rem;line-height:1.3}
 .awo{font-size:.74rem;color:var(--gold);font-weight:500;margin-bottom:.2rem}
 .awd{font-family:var(--mono);font-size:.64rem;color:var(--dim)}
@@ -466,32 +470,32 @@ footer{position:relative;z-index:2;padding:1.75rem 5rem;border-top:1px solid var
     <!-- <p class="ssub fi">End-to-end AI solutions for both technical teams and business leaders.</p> -->
     <div class="trust-grid">
       <div class="trust-card fi">
-        <div class="trust-icon">🤖</div>
+        <div class="trust-icon"><i data-lucide="bot"></i></div>
         <div class="trust-title">LLM &amp; Chatbot Systems</div>
         <div class="trust-desc">Production grade conversational AI with RAG pipelines, semantic caching, privacy architecture, and bilingual Arabic/English support. From prototype to deployment.</div>
       </div>
       <div class="trust-card fi2">
-        <div class="trust-icon">📊</div>
+        <div class="trust-icon"><i data-lucide="bar-chart-2"></i></div>
         <div class="trust-title">Data Science &amp; Analytics</div>
         <div class="trust-desc">Turning raw data into measurable business decisions (forecasting, segmentation, anomaly detection, and KPI dashboards).</div>
       </div>
       <div class="trust-card fi3">
-        <div class="trust-icon">🔧</div>
+        <div class="trust-icon"><i data-lucide="database"></i></div>
         <div class="trust-title">Data Engineering &amp; Pipelines</div>
         <div class="trust-desc">End-to-end ETL systems from API ingestion to Delta Lake to live dashboards. Scalable, tested, and built for production with monitoring and CI/CD.</div>
       </div>
       <div class="trust-card fi">
-        <div class="trust-icon">🌐</div>
+        <div class="trust-icon"><i data-lucide="languages"></i></div>
         <div class="trust-title">Arabic NLP Solutions</div>
         <div class="trust-desc">Specialized in NLP Solutions. Sentiment analysis, NER, and STT/TTS</div>
       </div>
       <div class="trust-card fi2">
-        <div class="trust-icon">🤝</div>
+        <div class="trust-icon"><i data-lucide="users"></i></div>
         <div class="trust-title">Technical &amp; Non-Technical Clients</div>
         <div class="trust-desc">I speak both languages, architecting solutions with CTOs and ML leads, then presenting results to operations managers and executives.</div>
       </div>
       <div class="trust-card fi3">
-        <div class="trust-icon">🚀</div>
+        <div class="trust-icon"><i data-lucide="rocket"></i></div>
         <div class="trust-title">Production Delivery</div>
         <div class="trust-desc">Every system ships with monitoring, documentation, and testing. Maintainable systems that the team can own and extend.</div>
       </div>
@@ -509,32 +513,32 @@ footer{position:relative;z-index:2;padding:1.75rem 5rem;border-top:1px solid var
     <!-- <p class="ssub fi">Highlighted = core production expertise.</p> -->
     <div class="skills-grid">
       <div class="sk-card fi">
-        <div class="sk-icon">🧠</div>
+        <div class="sk-icon"><i data-lucide="brain"></i></div>
         <div class="sk-title">Machine Learning</div>
         <div class="sk-tags"><span class="stag hi">TensorFlow</span><span class="stag hi">Time Series Forecasting</span><span class="stag hi">Clustering</span><span class="stag">OCR</span><span class="stag">Deep Learning</span><span class="stag">Anomaly Detection</span><span class="stag">Speech Recognition</span></div>
       </div>
       <div class="sk-card fi2">
-        <div class="sk-icon">💬</div>
+        <div class="sk-icon"><i data-lucide="message-square-text"></i></div>
         <div class="sk-title">NLP &amp; LLMs</div>
         <div class="sk-tags"><span class="stag hi">LangChain</span><span class="stag hi">RAG</span><span class="stag hi">Sentiment Analysis</span><span class="stag">spaCy / NER</span><span class="stag">Transformers</span><span class="stag">Whisper</span><span class="stag">Prompt Engineering</span></div>
       </div>
       <div class="sk-card fi3">
-        <div class="sk-icon">🗄</div>
+        <div class="sk-icon"><i data-lucide="server"></i></div>
         <div class="sk-title">Data Engineering</div>
         <div class="sk-tags"><span class="stag hi">Apache Spark</span><span class="stag hi">PySpark</span><span class="stag hi">Delta Lake</span><span class="stag hi">ETL Pipelines</span><span class="stag">PostgreSQL</span><span class="stag">Redis</span><span class="stag">SQL</span></div>
       </div>
       <div class="sk-card fi">
-        <div class="sk-icon">☁️</div>
+        <div class="sk-icon"><i data-lucide="cloud"></i></div>
         <div class="sk-title">Cloud &amp; MLOps</div>
         <div class="sk-tags"><span class="stag hi">AWS</span><span class="stag hi">Docker</span><span class="stag hi">FastAPI</span><span class="stag">CI/CD</span><span class="stag">Prometheus</span><span class="stag">Grafana</span><span class="stag">Streamlit</span></div>
       </div>
       <div class="sk-card fi2">
-        <div class="sk-icon">📊</div>
+        <div class="sk-icon"><i data-lucide="pie-chart"></i></div>
         <div class="sk-title">Visualization</div>
         <div class="sk-tags"><span class="stag hi">Tableau</span><span class="stag hi">Power BI</span><span class="stag">Apache Superset</span><span class="stag">Plotly</span><span class="stag">Matplotlib</span></div>
       </div>
       <div class="sk-card fi3">
-        <div class="sk-icon">🔧</div>
+        <div class="sk-icon"><i data-lucide="settings-2"></i></div>
         <div class="sk-title">Tools &amp; Process</div>
         <div class="sk-tags"><span class="stag hi">Git</span><span class="stag hi">Requirements Gathering</span><span class="stag">Jira</span><span class="stag">Agile</span><span class="stag">Postman</span></div>
       </div>
@@ -550,9 +554,9 @@ footer{position:relative;z-index:2;padding:1.75rem 5rem;border-top:1px solid var
     <p class="slabel fi">Recognition</p>
     <h2 class="sh fi">Awards &amp; certifications</h2>
     <div class="awards-grid">
-      <div class="awc fi"><div class="awi">🥈</div><div><div class="awt">2nd Place — LangChain Hackathon</div><div class="awo">Lablab MENA · Out of 43 projects</div><div class="awd">May 2023 · <a href="https://bit.ly/3Zo9FEn" class="awl" target="_blank">View certificate ↗</a></div></div></div>
-      <div class="awc fi2"><div class="awi">🏅</div><div><div class="awt">Service Excellence Award</div><div class="awo">Fixed Solutions</div><div class="awd">Jun 2023 · Extraordinary contribution &amp; commitment to the profession</div></div></div>
-      <div class="awc fi"><div class="awi">☁️</div><div><div class="awt">AWS Data Analytics Specialty</div><div class="awo">Amazon Web Services · Certified</div><div class="awd"><a href="https://bit.ly/3PRPzN2" class="awl" target="_blank">View certificate ↗</a></div></div></div>
+      <div class="awc fi"><div class="awi"><i data-lucide="trophy"></i></div><div><div class="awt">2nd Place — LangChain Hackathon</div><div class="awo">Lablab MENA · Out of 43 projects</div><div class="awd">May 2023 · <a href="https://bit.ly/3Zo9FEn" class="awl" target="_blank">View certificate ↗</a></div></div></div>
+      <div class="awc fi2"><div class="awi"><i data-lucide="medal"></i></div><div><div class="awt">Service Excellence Award</div><div class="awo">Fixed Solutions</div><div class="awd">Jun 2023 · Extraordinary contribution &amp; commitment to the profession</div></div></div>
+      <div class="awc fi"><div class="awi"><i data-lucide="badge-check"></i></div><div><div class="awt">AWS Data Analytics Specialty</div><div class="awo">Amazon Web Services · Certified</div><div class="awd"><a href="https://bit.ly/3PRPzN2" class="awl" target="_blank">View certificate ↗</a></div></div></div>
 
     </div>
   </div>
@@ -656,6 +660,7 @@ document.querySelectorAll('.cnt').forEach(el => cntObs.observe(el));
 // const img = document.getElementById('pimg');
 // const ph = document.getElementById('pph');
 // if(img && img.getAttribute('src')) { img.onload = () => { ph.style.display='none'; img.style.display='block'; }; }
+  lucide.createIcons();
 </script>
 </body>
 </html>
